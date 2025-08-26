@@ -15,3 +15,21 @@ Then open in your browser:
 ```
 http://localhost:8080
 ```
+
+✅ Ways to stop it
+
+If you are still in that terminal → just type:
+```
+exit
+```
+(or press Ctrl + D)
+This closes the SSH session → port forwarding stops.
+
+If you put it in the background, find the process:
+```
+ps aux | grep "ssh -L"
+```
+Then kill it:
+```
+kill <PID>
+```
