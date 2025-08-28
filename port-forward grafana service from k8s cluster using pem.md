@@ -19,7 +19,7 @@ Container actually runs Grafana on 3000 internally
 
 Since the Service is exposing port 80, forward that one:
 ```
-kubectl port-forward svc/grafana 8080:80 -n monitoring
+kubectl port-forward svc/grafana 8081:80 -n monitoring
 ```
 
 Kubernetes cluster is only accessible from an EC2 server, not directly from your laptop.
@@ -34,13 +34,13 @@ From EC2 server → Kubernetes cluster (kubectl port-forward).
 
 SSH into EC2 with port-forward:
 ```
-ssh -i volt_bastion.pem -L 8080:localhost:8080 azureuser@40.120.107.194
+ssh -i volt_bastion.pem -L 8081:localhost:8081 azureuser@40.120.107.194
 ```
 Inside the EC2 server, run:
 ```
-kubectl port-forward svc/grafana 8080:80 -n monitoring
+kubectl port-forward svc/grafana 8081:80 -n monitoring
 ```
 On your laptop, open:
 ```
-http://localhost:8080
+http://localhost:8081
 ````
