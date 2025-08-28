@@ -34,7 +34,7 @@ From EC2 server → Kubernetes cluster (kubectl port-forward).
 
 SSH into EC2 with port-forward:
 ```
-ssh -i mykey.pem -L 8080:localhost:8080 ec2-user@<EC2-PUBLIC-IP>
+ssh -i volt_bastion.pem -L 8080:localhost:8080 azureuser@40.120.107.194
 ```
 Inside the EC2 server, run:
 ```
