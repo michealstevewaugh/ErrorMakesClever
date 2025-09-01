@@ -1,4 +1,4 @@
-Everyone can't ssh the private machine. So use under the same cidr/subnet range public machine.
+Everyone can't ssh the private machine. So use under the same cidr/subnet range public machine for ssh and create a tunnel.
 ```
 ssh -i mykey.pem -L 9200:<private-vm-ip>:9200 user@<bastion-public-ip>
 ```
