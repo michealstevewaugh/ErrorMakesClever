@@ -11,6 +11,11 @@ ssh -i /path/to/mykey.pem azureuser@74.162.41.187
 ```
 ssh -i /path/to/mykey.pem -L 8080:localhost:8080 azureuser@74.162.41.187
 ```
+✅ If you don’t want to keep a terminal open, run it with -N -f:
+```
+ssh -i volt-tools-key.pem -L 8080:localhost:8080 azureuser@74.162.41.187 -N -f
+```
+
 Then open in your browser:
 ```
 http://localhost:8080
